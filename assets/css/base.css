@@ -1,0 +1,23 @@
+a:hover{
+    text-decoration: none;/*mất dấu gạch chân khi hover vào*/
+}
+
+/* button */
+.button{
+    background-color: #ddd;
+    display: inline-block;/*để set được padding trên dưới cho nó*/
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #000;
+}
+.button_main{
+    background-color: rgb(101, 101, 203);
+    color: #fff;
+}
+.button_main:hover{
+    background-color: red;
+    color: greenyellow;
+}
+/* end button */
