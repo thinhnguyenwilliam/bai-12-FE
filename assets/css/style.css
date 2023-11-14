@@ -52,6 +52,14 @@
     color: rgb(103, 103, 202);
     margin-bottom: 20px;
 }
+@media (max-width:575.98px){
+    .section_1 .inner_head .inner_title {
+        font-size: 28px;
+    }
+    .section_1 .inner_head .inner_desc {
+        font-size: 16px;
+    }
+}
 /* End Section 1 */
 
 
@@ -76,16 +84,34 @@
 .section_2{
     padding: 80px 0;
 }
+.section_2 .inner_box {
+    margin: 15px 0;
+}
 .section_2 .inner_box .inner_content{
     background-color: #F3F9FD;
     padding: 30px;
     border-radius: 6px;
     text-align: center;
     font-style: italic;
+
+    position: relative;/*trên inner_content có hình mũi tên nên để position relative*/
 }
 .section_2 .inner_box .inner_content i{
     font-size: 24px;
     color: blue;
+}
+.section_2 .inner_box .inner_content::before{
+    content: '';
+    position: absolute;/*so với box cha là .section_2 .inner_box .inner_content*/
+    top: 100%;
+    left: calc(50% - 39.11px/2);/*width của tam giác đỏ là 39.11px*/
+
+    /*code vẽ tam giác down*/
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #F3F9FD; /*ảo vãi vẽ ra tam giác cùng màu inner content*/
 }
 .section_2 .inner_info{
     text-align: center;
