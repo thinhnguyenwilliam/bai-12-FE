@@ -1,0 +1,18 @@
+/* Section 1 */
+.section_1{
+    background-image: url(../img/hero-bg.jpg);
+    padding: 100px 0;
+
+    position: relative;/* cách làm mờ hình ảnh nền */
+}
+.section_1::before{ /* cách làm mờ hình ảnh nền, bản chất before là 1 phần tử giả là phần tử con nằm bên trong class section_1*/
+    content: '';
+    background-color: #ffffffb4;/*chỉnh cái thanh thứ 2 kéo xuống màu đậm ra hình nền rõ,kéo lên màu mờ ra hình nền mờ*/
+    width: 100%;
+    height: 100%;
+    position: absolute;/*z index mặc định nếu không có position thì là mặc định static thì kg áp dụng được z index thì z index  của nó sẽ nhỏ hơn z index: 0, nếu khác static là z index mặc định là 0*/
+    /*2 cái box mà có z index =0 thì thằng nào viết sau thì nổi lên trên trước*/
+    top: 0;
+    left: 0;
+}
+/* End Section 1 */
